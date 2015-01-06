@@ -1,5 +1,3 @@
-require 'pry'
-
 class Admin::Gallery::PhotosController < Admin::Gallery::BaseController
   
   before_filter :load_gallery
