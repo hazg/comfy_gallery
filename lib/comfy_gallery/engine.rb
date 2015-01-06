@@ -18,14 +18,6 @@ module ComfyGallery
       end
     end
 
-    initializer :append_migrations do |app|
-      unless app.root.to_s.match root.to_s
-        config.paths["db/migrate"].expanded.each do |expanded_path|
-          app.config.paths["db/migrate"] << expanded_path
-        end
-      end
-    end
-
     # Sort the layouts by display name
     config.after_initialize do
       ComfyGallery.config.layouts.sort! { |a,b| a.name <=> b.name }
