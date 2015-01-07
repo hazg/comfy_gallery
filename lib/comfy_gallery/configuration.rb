@@ -25,7 +25,7 @@ module ComfyGallery
       @form_builder       = 'ComfyGallery::FormBuilder'
       @s3_timeout         = 10
       @layouts            = [
-        Gallery::Layout.new("three", "three_in_a_row")
+        Gallery::Layout.new("default", "default")
       ]
       @default_layout     = @layouts.first
     end
