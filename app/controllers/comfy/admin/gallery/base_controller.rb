@@ -1,0 +1,3 @@
+class Comfy::Admin::Gallery::BaseController < Comfy::Admin::Cms::BaseController
+  # ...
+end

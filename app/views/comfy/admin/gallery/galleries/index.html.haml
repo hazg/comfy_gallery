@@ -1,5 +1,5 @@
 .page-header
-	= link_to 'Add new gallery', new_admin_gallery_gallery_path, :class => 'btn btn-default pull-right'
+	= link_to 'Add new gallery', new_comfy_admin_gallery_path(@site), :class => 'btn btn-default pull-right'
 	%h2 Galleries
 
 / =render :partial => 'comfy/admin/cms/categories/index', :object => 'Gallery::Gallery' if defined?(ComfortableMexicanSofa)

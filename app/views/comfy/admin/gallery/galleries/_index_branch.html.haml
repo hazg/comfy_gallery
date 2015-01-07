@@ -1,0 +1,20 @@
+- gallery      ||= index_branch
+
+%li{:id => dom_id(gallery)}
+  .item
+    .icon
+      - gallery.photos.limit(1).each do |photo|
+        =gallery_image_tag(photo, :admin_thumb)
+    
+    .item-content
+      .btn-group.btn-group-sm
+        = link_to t('.photos'), comfy_admin_gallery_photos_path(@site, gallery), :class => 'btn btn-default'
+        = link_to t('.edit'), edit_comfy_admin_gallery_path(@site, gallery), :class => 'btn btn-default'
+        = link_to t('.delete'), comfy_admin_gallery_path(@site, gallery), :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => 'btn btn-danger'
+    
+      .item-title
+        = link_to gallery.title, comfy_admin_gallery_photos_path(@site, gallery)
+      .item-meta
+        = gallery.identifier
+      .item-meta
+        = "#{gallery.photos.length} Photos"

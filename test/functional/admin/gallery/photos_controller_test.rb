@@ -12,7 +12,7 @@ class Admin::Gallery::PhotosControllerTest < ActionController::TestCase
   def test_get_index_failure
     get :index, :gallery_id => 'invalid'
     assert_response :redirect
-    assert_redirected_to admin_gallery_galleries_path
+    assert_redirected_to comfy_admin_galleries_path
     assert_equal 'Gallery not found', flash[:error]
   end
   

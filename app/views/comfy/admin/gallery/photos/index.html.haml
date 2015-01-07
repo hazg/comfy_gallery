@@ -1,8 +1,8 @@
 
 .page-header
-	= link_to "Return to Galleries", admin_gallery_galleries_path
+	= link_to "Return to Galleries", comfy_admin_galleries_path(@site)
 
-	= link_to 'Add new photo', new_admin_gallery_gallery_photo_path(@gallery), :class => 'btn btn-default pull-right'
+	= link_to 'Add new photo', new_comfy_admin_gallery_photo_path(@site, @gallery), :class => 'btn btn-default pull-right'
 	%h2= "Photos for #{@gallery.title}"
 	- if @photos.count > 0
 		%h5= "#{@photos.length} Photos"

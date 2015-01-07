@@ -1,4 +1,4 @@
-class Admin::Gallery::PhotosController < Admin::Gallery::BaseController
+class Comfy::Admin::Gallery::PhotosController < Comfy::Admin::Gallery::BaseController
   
   before_filter :load_gallery
   before_filter :load_photo,  :only => [:edit, :update, :destroy, :crop]
@@ -61,7 +61,7 @@ protected
     @gallery = Gallery::Gallery.find(photo_params[:gallery_id])
   rescue ActiveRecord::RecordNotFound
     flash[:error] = 'Gallery not found'
-    redirect_to admin_gallery_galleries_path
+    redirect_to comfy_admin_galleries_path(@site)
   end
   
   def load_photo

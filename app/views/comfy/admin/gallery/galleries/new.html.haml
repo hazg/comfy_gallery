@@ -1,6 +1,6 @@
 .page-header
-	- if defined?(ComfortableMexicanSofa)
-		= link_to t('comfy.admin.edit.revision', :count => @gallery.revisions.count), admin_gallery_gallery_revisions_path(@site, @gallery), :class => 'btn btn-default pull-right'
+	- if defined?(ComfortableMexicanSofa) and not @gallery.new_record?
+		= link_to t('comfy.admin.edit.revision', :count => @gallery.revisions.count), comfy_admin_gallery_revisions_path(@site, @gallery), :class => 'btn btn-default pull-right'
 		
 	%h2= "New Gallery"
 

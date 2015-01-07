@@ -1,5 +1,5 @@
 .page-header
-	= link_to "Return to #{@gallery.title}", admin_gallery_gallery_photos_path(@gallery)
+	= link_to "Return to #{@gallery.title}", comfy_admin_gallery_photos_path(@site, @gallery)
 	%h2 Editing Photo
 
 = comfy_gallery_form_for @photo, :url => { :action => :update }, :html => { :multipart => true } do |form|
