@@ -11,4 +11,5 @@
                     = link_to photo.image.url, title: photo.title, class:'photo' do
                         = gallery_image_tag(photo, 'full', size: '324x192')
                     .caption
-                        = photo.title
+                        %div= photo.title if photo.title.present?
+                        %div{class:'small'}= photo.description if photo.description.present?
