@@ -13,7 +13,7 @@ module ComfyGallery
           conf.form_builder       = 'ComfortableMexicanSofa::FormBuilder'
         end
         # applying nav elements
-        ComfortableMexicanSofa::ViewHooks.add(:navigation, '/admin/gallery/navigation')
+        ComfortableMexicanSofa::ViewHooks.add(:navigation, '/comfy/admin/gallery/navigation')
       end
     end
 
