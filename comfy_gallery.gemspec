@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   # s.rubygems_version = "1.8.10"
   s.summary = "ComfyGallery is an image gallery engine for Rails 4 apps (and ComfortableMexicanSofa)"
 
-  s.add_dependency "rails", "~> 4.1.0"
+  s.add_dependency "rails", "~> 4.2.0"
   s.add_dependency "paperclip", ">= 2.3.0"
   s.add_dependency "jquery-rails"
   s.add_dependency "haml-rails"
