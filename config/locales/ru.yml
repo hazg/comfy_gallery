@@ -29,6 +29,7 @@ ru:
         galleries:
           title: Галереи
           new: Новая галерея
+          return_to: Вернуться к
           add_new_gallery: Добавить новую галерею
           editing: Редактирование
           image_properties: Свойства изображения
@@ -40,10 +41,11 @@ ru:
             delete: Удалить
         photos:
           replace_image: Заменить фото
+          new: Новое фото
           image: Фото
           editing_photo: Редактирование фотографии
           return_to: Вернуться к
-          return_to_galleries: Вернеться к галереям
+          return_to_galleries: Вернуться к галереям
           add_new: Добавить новое фото
           photos_for: Фотографии для
 
@@ -51,7 +53,7 @@ ru:
             zero: Нет фотографий
             one: 1 фото
             few: "%{count} фото"
-            other: "%{count} фото"
+            many: "%{count} фото"
 
           index_branch:
             photos: Фотографии

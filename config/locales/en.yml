@@ -41,6 +41,8 @@ en:
 
         photos:
           replace_image: Replace image
+          new: New photo
+          return_to: Return to
           image: Image
           editing_photo: Editing photo
           return_to: Return to
@@ -52,7 +54,7 @@ en:
             zero: No photos
             one: 1 photo
             few: "%{count} photos"
-            other: "%{count} photos"
+            many: "%{count} photos"
 
           index_branch:
             photos: Images
