@@ -2,7 +2,7 @@
 	- if defined?(ComfortableMexicanSofa) and not @gallery.new_record?
 		= link_to t('comfy.admin.edit.revision', :count => @gallery.revisions.count), comfy_admin_gallery_revisions_path(@site, @gallery), :class => 'btn btn-default pull-right'
 		
-	%h2= "New Gallery"
+	%h2= t('comfy.admin.gallery.galleries.new')
 
 - if defined?(ComfortableMexicanSofa)
 	- content_for :right_column do

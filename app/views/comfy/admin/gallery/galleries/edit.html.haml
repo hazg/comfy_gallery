@@ -4,7 +4,7 @@
 	- if defined?(ComfortableMexicanSofa)
 		= link_to t('comfy.admin.cms.pages.edit.revision', :count => @gallery.revisions.count), comfy_admin_gallery_revisions_path(@site, @gallery), :class => 'btn btn-default pull-right'
 		
-	%h2= "Editing #{@gallery.title}"
+	%h2= t('comfy.admin.gallery.galleries.editing') + " #{@gallery.title}"
 
 - if defined?(ComfortableMexicanSofa)
 	- content_for :right_column do

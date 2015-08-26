@@ -17,4 +17,5 @@
       .item-meta
         = gallery.identifier
       .item-meta
-        = "#{gallery.photos.length} Photos"
+        = t('comfy.admin.gallery.photos.photos', count: gallery.photos.length)
+

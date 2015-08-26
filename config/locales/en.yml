@@ -1,0 +1,61 @@
+---
+en:
+  activerecord:
+    attributes:
+      models:
+        gallery/gallery: Gallery
+        gallery/photo: Photo
+
+      gallery/gallery:
+        title: Title
+        identifier: Unique Identifier for this Gallery
+        description: Description 
+        layout: Layout
+        full_width: Full width
+        full_height: Full height 
+        force_ratio_full: Force Width and Height (otherwise, original image ratio is maintained)
+      gallery/photo:
+        title: Title
+        image: Image
+        url: Link to
+        description: Description
+
+  comfy:
+    admin:
+      gallery:
+        
+        navigation_title: Galleries
+        
+        galleries:
+          title: Galleries
+          new: New gallery
+          add_new_gallery: Add new gallery
+          editing: Editing
+          image_properties: Image properties
+          image_properties_description: During upload images will be resized to match the full width and height specified below. Leave blank to retain original size
+
+          index_branch:
+            photos: Photos
+            edit: Edit
+            delete: Delete
+
+        photos:
+          replace_image: Replace image
+          image: Image
+          editing_photo: Editing photo
+          return_to: Return to
+          return_to_galleries: Return to galleries
+          add_new: Add new photo
+          photos_for: Photos for
+          
+          photos:
+            zero: No photos
+            one: 1 photo
+            few: "%{count} photos"
+            other: "%{count} photos"
+
+          index_branch:
+            photos: Images
+            edit: Edit
+            delete: Delete
+

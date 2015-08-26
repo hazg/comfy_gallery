@@ -1,0 +1,60 @@
+---
+ru:
+  activerecord:
+    models:
+      gallery/gallery: Галерея
+      gallery/photo: Фото
+
+    attributes:
+      gallery/gallery:
+        title: Заголовок
+        identifier: Идентификатор
+        description: Описание
+        layout: Шаблон
+        full_width: Полная ширина
+        full_height: Полная высота
+        force_ratio_full: Изменять пропорции (оставьте пустым, чтобы оставить оригинал)
+      gallery/photo:
+        title: Заголовок
+        image: Фото
+        url: Ссылка
+        description: Описание
+
+  comfy:
+    admin:
+      gallery:
+        
+        navigation_title: Галереи
+
+        galleries:
+          title: Галереи
+          new: Новая галерея
+          add_new_gallery: Добавить новую галерею
+          editing: Редактирование
+          image_properties: Свойства изображения
+          image_properties_description: Во время загрузки изображений они будут изменены в соответствии с шириной и высотой, указанными ниже. Оставьте размер пустым, чтобы изображения не менялись.
+
+          index_branch:
+            photos: Фотографии
+            edit: Редактировать
+            delete: Удалить
+        photos:
+          replace_image: Заменить фото
+          image: Фото
+          editing_photo: Редактирование фотографии
+          return_to: Вернуться к
+          return_to_galleries: Вернеться к галереям
+          add_new: Добавить новое фото
+          photos_for: Фотографии для
+
+          photos:
+            zero: Нет фотографий
+            one: 1 фото
+            few: "%{count} фото"
+            other: "%{count} фото"
+
+          index_branch:
+            photos: Фотографии
+            edit: Редактировать
+            delete: Удалить
+

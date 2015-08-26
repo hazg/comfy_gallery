@@ -1,11 +1,11 @@
 
 .page-header
-	= link_to "Return to Galleries", comfy_admin_galleries_path(@site)
+	= link_to t('comfy.admin.gallery.photos.return_to_galleries'), comfy_admin_galleries_path(@site)
 
-	= link_to 'Add new photo', new_comfy_admin_gallery_photo_path(@site, @gallery), :class => 'btn btn-default pull-right'
-	%h2= "Photos for #{@gallery.title}"
+	= link_to t('comfy.admin.gallery.photos.add_new'), new_comfy_admin_gallery_photo_path(@site, @gallery), :class => 'btn btn-default pull-right'
+	%h2= t('comfy.admin.gallery.photos.photos_for')+ " #{@gallery.title}"
 	- if @photos.count > 0
-		%h5= "#{@photos.length} Photos"
+		%h5= t('comfy.admin.gallery.photos.photos', count: @photos.length)
 
 - if defined?(ComfortableMexicanSofa)
 	- content_for :right_column do
