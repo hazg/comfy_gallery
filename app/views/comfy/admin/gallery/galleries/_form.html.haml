@@ -1,5 +1,5 @@
 = form.text_field :title, :id => (@gallery.new_record?? 'slugify' : nil)
-= form.text_field :identifier, :id => 'slug', :label => "Unique Identifier for this Gallery"
+= form.text_field :identifier, :id => 'slug'
 = form.text_area  :description
 = form.select :layout, options_for_select(@layouts, @gallery.layout), {include_blank: false}
 - if defined?(ComfortableMexicanSofa) 
@@ -7,14 +7,14 @@
 
 %hr
 .col-sm-12
-	%h3 Image Properties
+	%h3= t('comfy.admin.gallery.galleries.image_properties')
 	.col-sm-12
-		%p During upload images will be resized to match the full width and height specified below. Leave blank to retain original size.
+		%p= t('comfy.admin.gallery.galleries.image_properties_description')
 = form.text_field :full_width 
 = form.text_field :full_height 
-= form.check_box :force_ratio_full, :label => "Force Width and Height (otherwise, original image ratio is maintained)" 
+= form.check_box :force_ratio_full
 / = form.text_field :thumb_width 
 / = form.text_field :thumb_height 
 / = form.check_box :force_ratio_thumb, :label => "Force Width and Height (otherwise, original image ratio is maintained)" 
 
-= form.submit 'Save' 
+= form.submit

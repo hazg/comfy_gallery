@@ -1,8 +1,8 @@
-class Admin::Gallery::GalleriesController < Admin::Gallery::BaseController
+class Comfy::Admin::Gallery::GalleriesController < Comfy::Admin::Gallery::BaseController
   
   before_filter :load_gallery,  :except => [:index, :new, :create]
   before_filter :build_gallery, :only   => [:create]
-  before_filter :setup_layouts, :except => [:index, :create]
+  before_filter :setup_layouts, :except => [:index]
   
   def index
     if params[:category].present?
@@ -20,7 +20,7 @@ class Admin::Gallery::GalleriesController < Admin::Gallery::BaseController
   def create
     @gallery.save!
     flash[:notice] = 'Gallery created'
-    redirect_to admin_gallery_gallery_photos_path(@gallery)
+    redirect_to comfy_admin_gallery_photos_path(@site, @gallery) and return
   rescue ActiveRecord::RecordInvalid
     flash.now[:error] = 'Failed to create Gallery'
     render :action => :new

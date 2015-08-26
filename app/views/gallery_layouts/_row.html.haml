@@ -3,17 +3,13 @@
 -#		cols - # of columns
 
 - if gallery.present?
-	%section.photos.photos2.row
-		.columns.small-12.small-centered
-			%h3= gallery.title
-			%ul{class: "small-block-grid-#{cols}"}
-				- index = 0
-				- gallery.photos.each do |photo|
-					- break if index == cols
-					- index += 1
-					%li
-						= link_to photo.url, title: photo.title do
-							=gallery_image_tag(photo, 'full', size: '324x192')
-							%h5= photo.title
-
-
+    %h3= gallery.title
+    %section.photos.row
+        - gallery.photos.each do |photo|
+            .col-xs-6.col-md-3
+                .thumbnail
+                    = link_to photo.image.url(:full), title: photo.title, class:'photo' do
+                        = gallery_image_tag(photo, 'full', size: '324x192')
+                    .caption
+                        %div= photo.title if photo.title.present?
+                        %div{class:'small'}= photo.description if photo.description.present?

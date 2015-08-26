@@ -1,14 +1,14 @@
-class Admin::Gallery::RevisionsController < Comfy::Admin::Cms::RevisionsController
+class Comfy::Admin::Gallery::RevisionsController < Comfy::Admin::Cms::RevisionsController
 
 protected
   
   def load_record
     @record = if params[:gallery_id]
-      ::Gallery::Gallery.find(params[:layout_id])
+      ::Gallery::Gallery.find(params[:gallery_id])
     end
   rescue ActiveRecord::RecordNotFound
     flash[:danger] = I18n.t('comfy.admin.cms.revisions.record_not_found')
-    redirect_to comfy_admin_cms_path
+    redirect_to comfy_admin_cms_path(@site)
   end
   
   def redirect_to_record

@@ -1,0 +1,6 @@
+.page-header
+	= link_to t('comfy.admin.gallery.photos.return_to')+" #{@gallery.title}", comfy_admin_gallery_photos_path(@site, @gallery)
+	%h2= t('comfy.admin.gallery.photos.editing_photo')
+
+= comfy_gallery_form_for @photo, :url => { :action => :update }, :html => { :multipart => true } do |form|
+	= render form

@@ -23,6 +23,12 @@ module Comfy
       def generate_initialization
         copy_file 'config/initializers/comfy_gallery.rb', 'config/initializers/comfy_gallery.rb'
       end
+
+      def generate_routing
+        route_string  = "  comfy_route :gallery_admin, :path => '/admin'\n"
+        # route_string << "  comfy_route :gallery, :path => '/gallery'\n"
+        route route_string[2..-1]
+      end
       
       def show_readme
         readme 'lib/generators/comfy/gallery/README'
