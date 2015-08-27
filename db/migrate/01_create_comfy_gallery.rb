@@ -5,8 +5,8 @@ class CreateComfyGallery < ActiveRecord::Migration
         t.string   :title,                             null: false
         t.string   :identifier,                        null: false
         t.text     :description
-        t.integer  :full_width,        default: 640
-        t.integer  :full_height,       default: 480
+        t.integer  :full_width,        default: 1024
+        t.integer  :full_height,       default: 768
         t.boolean  :force_ratio_full,  default: false, null: false
         t.integer  :thumb_width,       default: 150
         t.integer  :thumb_height,      default: 150
