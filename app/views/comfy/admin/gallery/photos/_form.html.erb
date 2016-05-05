@@ -1,0 +1,26 @@
+<%= form.text_field :title %>
+<% if @photo.image? && @photo.id.present? %>
+  <% # Get a url that blows up after so many seconds %>
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      <%= t('comfy.admin.gallery.photos.image') %>
+    </label>
+    <div class="div col-sm-10">
+      <%= gallery_image_tag(@photo, :admin_full) %>
+    </div>
+  </div>
+  <% label = t('comfy.admin.gallery.photos.replace_image') %>
+<% else %>
+  <% label = t('comfy.admin.gallery.photos.image') %>
+<% end %>
+<div class="form-group">
+  <label class="control-label col-sm-2">
+    <%= label %>
+  </label>
+  <div class="div col-sm-10">
+    <%= file_field '', :image, :multiple => false %>
+  </div>
+</div>
+<%= form.text_field :url %>
+<%= form.text_area :description, :class => 'short' %>
+<%= form.submit %>
