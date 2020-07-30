@@ -9,10 +9,10 @@ en:
       gallery/gallery:
         title: Title
         identifier: Unique Identifier for this Gallery
-        description: Description 
+        description: Description
         layout: Layout
         full_width: Full width
-        full_height: Full height 
+        full_height: Full height
         force_ratio_full: Force Width and Height (otherwise, original image ratio is maintained)
       gallery/photo:
         title: Title
@@ -23,9 +23,9 @@ en:
   comfy:
     admin:
       gallery:
-        
+
         navigation_title: Galleries
-        
+
         galleries:
           title: Galleries
           new: New gallery
@@ -49,15 +49,13 @@ en:
           return_to_galleries: Return to galleries
           add_new: Add new photo
           photos_for: Photos for
-          
+
           photos:
             zero: No photos
             one: 1 photo
-            few: "%{count} photos"
-            many: "%{count} photos"
+            other: "%{count} photos"
 
           index_branch:
             photos: Images
             edit: Edit
             delete: Delete
-
